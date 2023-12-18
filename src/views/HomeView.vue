@@ -1,5 +1,4 @@
 <template>
-  <h1>Home</h1>
   <div v-for="project in projects" :key="project.id">
     <SingleProject :project="project" @completePjtStatus="completePjtStatus" @deletePjt="deletePjt"></SingleProject>
     
@@ -43,4 +42,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+
+</style>
