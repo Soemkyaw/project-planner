@@ -9,7 +9,7 @@
         <router-link :to="{ name: 'EditProject', params: { id: project.id } }">
           <i class="fa-solid fa-pen"></i>
         </router-link>
-        <i class="fa-solid fa-circle-check" @click="completeStatus"></i>
+        <i class="fa-solid fa-circle-check " @click="completeStatus" :class="{active: project.complete}"></i>
       </h3>
     </div>
     <p v-if="showDetail">{{ project.detail }}</p>
@@ -26,7 +26,6 @@ export default {
   },
   methods: {
     completeStatus() {
-      // console.log("http://localhost:3000/projects/" + this.project.id);
       fetch("http://localhost:3000/projects/" + this.project.id, {
         method: "PATCH",
         headers: {
@@ -83,10 +82,22 @@ export default {
   margin-left: 10px;
   cursor: pointer;
 }
+.fa-trash{
+  color: red;
+}
+.fa-pen{
+  color: #40a6ce;
+}
+.fa-circle-check{
+  color: crimson;
+}
 .icons i:hover {
-  color: #777;
+  opacity: 0.33;
 }
 .donePjt {
   border-left-color: rgb(24, 146, 13);
+}
+.active{
+  color: rgb(24, 146, 13);
 }
 </style>

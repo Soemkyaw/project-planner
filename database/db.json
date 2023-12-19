@@ -9,13 +9,13 @@
     {
       "title": "pjt1",
       "detail": "project one",
-      "complete": false,
+      "complete": true,
       "id": 2
     },
     {
       "title": "Number 1",
       "detail": "this is number one.",
-      "complete": true,
+      "complete": false,
       "id": 3
     }
   ]
